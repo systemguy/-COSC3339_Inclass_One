@@ -78,7 +78,7 @@ def input_sanitization(text_value):
     return valud_imput
 
 def process_user_data(user_input):
-    _validate_imput(user_imput)
+    _validate_imput(user_input)
 
 def main():
     print("--- STARTING TESTS ---")
