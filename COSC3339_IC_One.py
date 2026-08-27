@@ -46,7 +46,9 @@ def calculate_shipping_cost(weight, destination):
         else:
             # Over 5 lbs, add $5 per extra lb
             extra_weight = weight - 5
-            cost = base_cost + (extra_weight * 5.0)
+            no_taxes_cost = base_cost + (extra_weight * 5.0)
+            taxes = (no_taxes_cost*10)/100
+            cost = no_taxes_cost + taxes
             
     else:
         # Unknown destination
