@@ -14,71 +14,71 @@ import math
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def calculate_hypotenuse(side_a, side_b):
-    result = (side_a**2 + side_b**2)**1/2  
-    return result
+    RESULT = (side_a**2 + side_b**2)**1/2  
+    return RESULT
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def count_words(sentence):
     if len(sentence) == 0:
         return 0
-    words = sentence.split(' ')  
-    return len(words)
+    WORDS = sentence.split(' ')  
+    return len(WORDS)
 
 
 # This method is long to allow for non-overlapping edits.
 def calculate_shipping_cost(weight, destination):
-    cost = 10.0
+    COST = 10.0
     
     if destination == "US":
-        base_cost = 15.0
+        BASE_COST = 15.0
         if weight <= 15:
-            cost = base_cost
+            COST = BASE_COST
         else:
             # Over 10 lbs, add $1 per extra lb
-            extra_weight = weight - 10
-            cost = base_cost + (extra_weight * 1.0)
+            EXTRA_WEIGHT = weight - 10
+            COST = BASE_COST + (EXTRA_WEIGHT * 1.0)
     
             
     elif destination == "International":
-        base_cost = 20.0
+        BASE_COST = 20.0
         if weight <= 5:
-            cost = base_cost
+            cost = BASE_COST
         else:
             # Over 5 lbs, add $5 per extra lb
-            extra_weight = weight - 5
-            no_taxes_cost = base_cost + (extra_weight * 5.0)
-            taxes = (no_taxes_cost*10)/100
-            cost = no_taxes_cost + taxes
+            EXTRA_WEIGHT = weight - 5
+            NOT_TAXES_COST = BASE_COST + (EXTRA_WEIGHT * 5.0)
+            TAXES = (NOT_TAXES_COST*10)/100
+            COST = NOT_TAXES_COST + TAXES
             
     else:
         # Unknown destination
         print(f"Error: Unknown destination {destination}")
         return None
 
-    return cost
+    return COST
 
 
 # This method uses funky logic. Rewrite it using different loop structures
 def curve_scores(scores):
-    curved_scores = []
+    CURVED_SCORES = []
     for i in scores:
-        curved_scores.append(min(i*1.05,100))
-    return  curved_scores #list(map(lambda x: min(x + 5, 100), scores))
+        CURVED_SCORES.append(min(i*1.05,100))
+    return CURVED_SCORES #list(map(lambda x: min(x + 5, 100), scores))
 
 
 # For scenario three change the name of this method.
 # For scenario five fix the typos
 def input_sanitization(text_value):
 
-    valid_input = True 
+    VALID_INPUT = True 
     
     if text_value is None:
-        valid_input = False
+        VALID_INPUT = False
     
     if text_value == "":
-        valid_input = False
+        VALID_INPUT = False
         
-    return valid_input
+    return VALID_INPUT
 
 def process_user_data(user_input):
     input_sanitization(user_input)
