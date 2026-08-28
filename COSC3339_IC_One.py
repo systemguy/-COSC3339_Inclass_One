@@ -70,18 +70,18 @@ def curve_scores(scores):
 # For scenario five fix the typos
 def input_sanitization(text_value):
 
-    VALUD_IMPUT = True 
+    VALID_INPUT = True 
     
     if text_value is None:
-        VALUD_IMPUT = False
+        VALID_INPUT = False
     
     if text_value == "":
-        VALUD_IMPUT = False
+        VALID_INPUT = False
         
-    return VALUD_IMPUT
+    return VALID_INPUT
 
 def process_user_data(user_input):
-    _validate_imput(user_input)
+    input_sanitization(user_input)
 
 def main():
     print("--- STARTING TESTS ---")
